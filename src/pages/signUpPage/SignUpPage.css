@@ -1,0 +1,13 @@
+.main-container{
+  width: 100vw;
+}
+
+
+.main-container form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  max-width: 400px;
+  justify-self: center;
+}
+

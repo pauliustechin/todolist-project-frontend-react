@@ -1,0 +1,14 @@
+.task-container form{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#add-button {
+  border: none;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}

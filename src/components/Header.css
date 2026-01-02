@@ -1,0 +1,10 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav ul{
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
