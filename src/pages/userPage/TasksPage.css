@@ -1,10 +1,12 @@
+.task-container{
+  background-color: aliceblue;
+}
+
 .task-container form{
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-
-
 
 .tasks-container{
   margin-top: 10px;

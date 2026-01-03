@@ -1,9 +1,12 @@
 #root {
-  max-width: 1280px;
+  max-width: 800px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
 }
 
 /* .logo {

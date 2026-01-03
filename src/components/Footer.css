@@ -1,6 +1,8 @@
-.main-container{
+.footer{
   background-color: aliceblue;
+  position: fixed;
+  bottom: 0;
   width: 80%;
   max-width: 800px;
-  flex: auto;
+  flex: none;
 }
