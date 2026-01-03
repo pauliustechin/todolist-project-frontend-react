@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './SignUpPage.css';
+// import App from '../../App';
 
 
 function AddUser(){
@@ -9,7 +10,7 @@ function AddUser(){
   const [password, setPassword] = useState('');
 
 
-  const handleSubmit = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:8080/api/public/users', {username, password});
@@ -20,9 +21,10 @@ function AddUser(){
     }
   }
 
+
   return (
     <main className="main-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSignUp}>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
         <label htmlFor="password">Password:</label>

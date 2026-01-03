@@ -1,11 +1,11 @@
 import { Link } from "react-router";
-import Header from "./../../components/Header.jsx";
+import LoginUser from "../loginPage/LoginPage.jsx";
 import "./HomePage.css";
 
-function HomePage() {
+function HomePage({ onDataReceived, mytesturl }) {
   return (
     <>
-      <Header />
+      <LoginUser onDataReceived={onDataReceived} mytesturl={mytesturl}/>
       <main className="main-container">
         <Link to="/signup">
           <button>Sign up</button>
