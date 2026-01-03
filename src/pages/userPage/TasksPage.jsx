@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./TasksPage.css";
-// import TasksGrid from "./TasksGrid.jsx";
 import axios from "axios";
 // import { useNavigate } from 'react-router';
 
@@ -8,10 +7,9 @@ function HandleTasks({ userId }) {
   const [task, setTask] = useState("");
   const [taskDate, setTaskDate] = useState("");
   const [taskData, setTaskData] = useState([]);
-  // const [userId2] = useState(userId);
+  // const [taskId, setTaskId] = useState(0);
   const postTaskUrl = `http://localhost:8080/api/public/users/${userId}/task`;
   const getTasksUrl = `http://localhost:8080/api/public/users/${userId}/task`;
-  // const navigateTo = useNavigate();
 
   const fetchTasks = async() => {
     await axios.get(getTasksUrl).then((response) => {
@@ -37,6 +35,15 @@ function HandleTasks({ userId }) {
     fetchTasks();
   }, []);
 
+  const removeTask = async (event) => {
+    const taskId = event.target.id;
+    const removeTaskUrl = `http://localhost:8080/api/public/users/${taskId}`;
+    await axios.delete(removeTaskUrl)
+      .then(() => {
+        fetchTasks();
+      });
+  }
+
   return (
     <main className="task-container">
       <form className="task-form" onSubmit={addTask}>
@@ -56,9 +63,8 @@ function HandleTasks({ userId }) {
           onChange={(e) => setTaskDate(e.target.value)}
           required
         />
-        <input type="submit" value="Add task" id="add-button" />
+        <input type="submit" value="Add task" className="tasks-btns add-task-button" />
       </form>
-      {/* <TasksGrid userId={userId2} onUpdate={fetchTasks}/> */}
       <div className="tasks-grid">
       {taskData.map((task) => {
         return (
@@ -72,8 +78,7 @@ function HandleTasks({ userId }) {
               </span>
             </div>
             <div>
-              <button className="remove-task-btn">Remove task</button>
-              <button  className="update-task-btn">Update date</button>
+              <button className="tasks-btns remove-task-btn" id={task.taskId} onClick={removeTask}>Remove task</button>{}
             </div>
           </div>
         );

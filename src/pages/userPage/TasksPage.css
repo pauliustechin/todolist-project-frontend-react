@@ -4,11 +4,30 @@
   gap: 10px;
 }
 
-#add-button {
+
+
+.tasks-container{
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.tasks-btns{
   border: none;
-  background-color: green;
   color: white;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
+}
+
+.add-task-button {
+  background-color: #008000c0;
+}
+
+.remove-task-btn{
+  background-color: #e21515d0;
+  margin-right: 5px;
 }
