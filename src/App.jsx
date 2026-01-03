@@ -9,24 +9,36 @@ import { useState } from "react";
 // import axios from 'axios';
 
 function App() {
-  // const [userTasks, setUserTasks] = useState('');
+  
   const [userId, setUserId] = useState('');
-  const [testUrl, setTestUrl] = useState(`public/0/tasks`)
+  const [urlPath, setUrlPath] = useState('');
+  // const navigateTo = useNavigate();
 
   const handleDataFromChild = (async (data) => {
-    // await setUserId(data[0]);
-    await setTestUrl(data[0]);
-    await setUserId(data[1]);
-    // await setUserTasks(data[1]);
-    // console.log(userId)
+    await setUserId(data[0]);
+    const myUrl = await (data[1]);
+    await setUrlPath(myUrl);
+    // navigateTo(urlPath);
+
   });
+
+
+
+  // const handleTaskUpdate = (async (data) => {
+  //   await setUserId(data);
+  // });
+
+    console.log(userId);
+    console.log(urlPath);
 
   return (
     <Routes>
       {/* index shortcut for path="/" */}
-      <Route index element={<HomePage onDataReceived={handleDataFromChild} mytesturl={testUrl}/>}></Route>
+      <Route index element={<HomePage onDataReceived={handleDataFromChild}/>}></Route>
       <Route path="signup" element={<AddUser/>}/>
-      <Route path={testUrl} element={<HandleTasks userId={userId}/>}/>
+      <Route path="user/tasks" element={<HandleTasks userId={userId}/>}/>
+      {/* <Route path="user/tasks" element={<HandleTasks userId={userId} onUpdatedTasks={handleTaskUpdate}/>}/> */}
+      {/* <Route path="user/tasks" render={([userId]) => <HandleTasks {...userId}/> }/> */}
     </Routes>
   );
 }
