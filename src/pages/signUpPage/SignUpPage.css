@@ -11,3 +11,7 @@
   justify-self: center;
 }
 
+.signup-validation{
+  color: red;
+  visibility: hidden;
+}

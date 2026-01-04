@@ -1,0 +1,10 @@
+.login-container{
+  background-color: aliceblue;
+  flex: auto;
+}
+
+.login-validation{
+  color: red;
+  visibility: hidden;
+}
+

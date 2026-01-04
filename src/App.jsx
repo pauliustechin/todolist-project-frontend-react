@@ -8,24 +8,21 @@ import { useState } from "react";
 
 function App() {
   const [userId, setUserId] = useState("");
-  const [urlPath, setUrlPath] = useState("");
 
-  const handleDataFromChild = async (data) => {
-    await setUserId(data[0]);
-    const myUrl = await data[1];
-    await setUrlPath(myUrl);
+  const handleDataFromChild = (data) => {
+    setUserId(data);
   };
 
-  console.log(userId);
-  console.log(urlPath);
-
   return (
-      <Routes>
-        <Route index element={<HomePage onDataReceived={handleDataFromChild} />}></Route>
-        <Route path="login" element={<LoginUser onDataReceived={handleDataFromChild}/>}></Route>
-        <Route path="signup" element={<AddUser />} />
-        <Route path="user/tasks" element={<HandleTasks userId={userId} />} />
-      </Routes>
+    <Routes>
+      <Route index element={<HomePage />}></Route>
+      <Route
+        path="login"
+        element={<LoginUser onDataReceived={handleDataFromChild} />}
+      ></Route>
+      <Route path="signup" element={<AddUser />} />
+      <Route path="user/tasks" element={<HandleTasks userId={userId} />} />
+    </Routes>
   );
 }
 
