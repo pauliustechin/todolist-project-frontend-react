@@ -9,13 +9,6 @@ function Header() {
           <span id="span1">To</span><span id="span2">Do</span><span id="span3">List</span>
         </p>
       </Link>
-      {/* <nav className="header-nav">
-        <ul>
-          <Link to="/">
-            <li>HOME</li>
-          </Link>
-        </ul>
-      </nav> */}
     </header>
   );
 }

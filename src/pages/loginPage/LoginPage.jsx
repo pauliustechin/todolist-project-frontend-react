@@ -38,7 +38,7 @@ function LoginUser({ onDataReceived }) {
       <title>LogIn</title>
       <Header></Header>
       <main className="login-container">
-        <p className="login-welcome">Please login</p>
+        <p className="login-welcome">Please log in</p>
         <form id="login-form" onSubmit={checkIfUserExists}>
           <input
             type="text"
@@ -56,7 +56,7 @@ function LoginUser({ onDataReceived }) {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <input type="submit" value="Login" id="login-btn"/>
+          <input type="submit" value="Log In" id="login-btn"/>
         </form>
         <p ref={validationElement} className="login-validation">
           Username or Password is incorrect

@@ -1,35 +1,77 @@
 .task-container{
-  background-color: aliceblue;
+  background-color: #E7DEAF;
+  width: 100%;
+  max-width: 800px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.task-container form{
+.tasks-welcome{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007E6E;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.task-form{
+  max-width: 600px;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  align-items: center;
+  font-weight: bold;
 }
 
-.tasks-container{
+.task-form input{
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+}
+
+.tasks-grid{
+  width: 80%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.task-card{
   margin-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #c9b188;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+}
+
+.task-card div p{
+  font-weight: bold;
+  margin: 10px;
 }
 
 .tasks-btns{
   border: none;
   color: white;
   font-weight: bold;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
 }
 
 .add-task-button {
-  background-color: #008000c0;
+  background-color: #73AF6F;
 }
 
 .remove-task-btn{
-  background-color: #e21515d0;
-  margin-right: 5px;
+  background-color: #e21515a1;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
 }

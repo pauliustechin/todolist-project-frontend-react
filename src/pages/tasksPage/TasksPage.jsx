@@ -49,6 +49,7 @@ function HandleTasks({ userId }) {
     <>
       <Header></Header>
       <main className="task-container">
+        <p className="tasks-welcome">Plan your daily tasks!</p>
         <form className="task-form" onSubmit={addTask}>
           <label htmlFor="task">Task:</label>
           <input
@@ -75,7 +76,7 @@ function HandleTasks({ userId }) {
         <div className="tasks-grid">
           {taskData.map((task) => {
             return (
-              <div key={task.taskId} className="tasks-container">
+              <div key={task.taskId} className="task-card">
                 <div>
                   <p>{task.task}</p>
                   <span>{convertDate(task.taskDate)}</span>
@@ -88,7 +89,6 @@ function HandleTasks({ userId }) {
                   >
                     Remove task
                   </button>
-                  {/* {} */}
                 </div>
               </div>
             );
