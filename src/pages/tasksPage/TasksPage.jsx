@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./TasksPage.css";
 import axios from "axios";
+import { convertDate } from "../../utils/converDate";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -14,7 +15,10 @@ function HandleTasks({ userId }) {
   const fetchTasks = async () => {
     await axios.get(getTasksUrl).then((response) => {
       const myTasks = response.data;
-      setTaskData(myTasks);
+      const sortedTasks = myTasks.sort((a, b) => {
+        return new Date(a.taskDate).getTime() - new Date(b.taskDate).getTime();
+      })
+      setTaskData(sortedTasks);
     });
   };
 
@@ -74,7 +78,7 @@ function HandleTasks({ userId }) {
               <div key={task.taskId} className="tasks-container">
                 <div>
                   <p>{task.task}</p>
-                  <span>{task.taskDate}</span>
+                  <span>{convertDate(task.taskDate)}</span>
                 </div>
                 <div>
                   <button
