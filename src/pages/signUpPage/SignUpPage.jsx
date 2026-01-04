@@ -37,7 +37,8 @@ function AddUser() {
     <>
       <title>SignUp</title>
       <Header></Header>
-      <main className="main-container">
+      <main className="signup-container">
+        <p className="signup-welcome">Please provide required information</p>
         <form onSubmit={handleSignUp}>
           <label htmlFor="username">Username:</label>
           <input
@@ -55,7 +56,7 @@ function AddUser() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <input type="submit" value="Add user" />
+          <input type="submit" value="Create new account" id="signup-btn" />
         </form>
         <p ref={validationElement} className="signup-validation">User with such username exists</p>
       </main>

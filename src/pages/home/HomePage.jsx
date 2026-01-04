@@ -11,11 +11,12 @@ function HomePage() {
       <Header/>
       {/* <LoginUser onDataReceived={onDataReceived} mytesturl={mytesturl}/> */}
       <main className="main-container">
+        <p>Sign up to plan your day!</p>
         <Link to='/login' >
-        <button>Login</button>
+        <button className="home-buttons login-button">Log In</button>
         </Link>
         <Link to="/signup">
-          <button>Sign up</button>
+          <button className="home-buttons signup-button">Sign Up</button>
         </Link>
       </main>
       <Footer></Footer>

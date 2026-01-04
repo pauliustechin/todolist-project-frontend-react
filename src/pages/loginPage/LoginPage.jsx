@@ -38,24 +38,25 @@ function LoginUser({ onDataReceived }) {
       <title>LogIn</title>
       <Header></Header>
       <main className="login-container">
+        <p className="login-welcome">Please login</p>
         <form id="login-form" onSubmit={checkIfUserExists}>
-          <label htmlFor="username">Username:</label>
           <input
             type="text"
             id="username"
             value={username}
+            placeholder="Enter username"
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
             value={password}
+            placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <input type="submit" value="Login" />
+          <input type="submit" value="Login" id="login-btn"/>
         </form>
         <p ref={validationElement} className="login-validation">
           Username or Password is incorrect

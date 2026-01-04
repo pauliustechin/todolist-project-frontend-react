@@ -1,10 +1,45 @@
-.login-container{
-  background-color: aliceblue;
-  flex: auto;
-}
-
 .login-validation{
   color: red;
   visibility: hidden;
 }
 
+.login-container{
+  background-color: #E7DEAF;
+  width: 100%;
+  max-width: 800px;
+  flex-grow: 1;
+}
+
+.login-welcome{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007E6E;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+#login-form{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: fit-content;
+  justify-self: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#login-form input{
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+}
+
+
+#login-btn{
+  color: white;
+  background-color: #73AF6F;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+}

@@ -8,7 +8,6 @@ function HandleTasks({ userId }) {
   const [task, setTask] = useState("");
   const [taskDate, setTaskDate] = useState("");
   const [taskData, setTaskData] = useState([]);
-  // const [taskId, setTaskId] = useState(0);
   const postTaskUrl = `http://localhost:8080/api/public/users/${userId}/task`;
   const getTasksUrl = `http://localhost:8080/api/public/users/${userId}/task`;
 
@@ -25,7 +24,6 @@ function HandleTasks({ userId }) {
       await axios.post(postTaskUrl, { task, taskDate }).then(() => {
         fetchTasks();
       });
-      // setTask("");
     } catch (error) {
       console.log("Error adding task: ", error);
     }
@@ -86,7 +84,7 @@ function HandleTasks({ userId }) {
                   >
                     Remove task
                   </button>
-                  {}
+                  {/* {} */}
                 </div>
               </div>
             );

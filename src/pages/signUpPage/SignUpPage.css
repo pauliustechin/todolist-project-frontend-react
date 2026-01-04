@@ -1,17 +1,49 @@
-.main-container{
-  width: 100vw;
+.signup-container{
+  background-color: #E7DEAF;
+  width: 100%;
+  max-width: 800px;
+  flex-grow: 1;
 }
 
+.signup-welcome{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007E6E;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
 
-.main-container form{
+.signup-container form{
   display: flex;
   flex-direction: column;
   width: 30%;
   max-width: 400px;
+  height: fit-content;
   justify-self: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.signup-container form input{
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
 }
 
 .signup-validation{
   color: red;
   visibility: hidden;
+}
+
+#signup-btn{
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #73AF6F;
 }

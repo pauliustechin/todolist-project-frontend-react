@@ -3,7 +3,7 @@ import HomePage from "./pages/home/HomePage.jsx";
 import AddUser from "./pages/signupPage/SignUpPage.jsx";
 import "./App.css";
 import { Route, Routes } from "react-router";
-import HandleTasks from "./pages/userPage/TasksPage.jsx";
+import HandleTasks from "./pages/tasksPage/TasksPage.jsx";
 import { useState } from "react";
 
 function App() {

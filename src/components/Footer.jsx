@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <p>CopyRight</p>
+      <p>© Copyright Paulius Semaška</p>
     </footer>
   );
 }

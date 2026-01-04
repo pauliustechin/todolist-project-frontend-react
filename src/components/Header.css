@@ -1,21 +1,41 @@
+
+
 .header{
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
   max-width: 800px;
   flex: none;
-  background-color: aliceblue;
-  padding: 20px;
+  background-color: #c9b188;
+  padding: 20px 20px 20px 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .header p{
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  font-style: italic;
 }
 
-.header-nav ul li{
+#span1{
+  color: #73AF6F;
+}
+
+#span2{
+  color: #e6e1b4;
+}
+
+#span3{
+  color: #007E6E;
+}
+
+
+
+
+/* .header-nav ul li{
   display: flex;
   gap: 10px;
   list-style-type: none;
-}
+} */
 

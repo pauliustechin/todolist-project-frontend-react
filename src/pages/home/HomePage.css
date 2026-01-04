@@ -1,6 +1,36 @@
 .main-container{
-  background-color: aliceblue;
-  width: 80%;
+  background-color: #E7DEAF;
+  width: 100%;
   max-width: 800px;
   flex: auto;
+  /* align-content: center; */
+}
+
+.main-container p{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007E6E;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.home-buttons{
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+  cursor: pointer;
+}
+
+.login-button{
+  background-color: #73AF6F;
+  margin-right: 5px;
+}
+
+.signup-button{
+  background-color: #0059ffa4;
+  margin-left: 5px;
 }
